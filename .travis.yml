@@ -11,6 +11,3 @@ rvm:
   - jruby-head
 before_install:
   - gem query -i -n ^bundler$ > /dev/null || gem install --no-ri --no-rdoc bundler
-notifications:
-  email:
-    - uwe@kubosch.no
