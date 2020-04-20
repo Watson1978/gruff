@@ -39,7 +39,8 @@ class TestGruffArea < GruffTestCase
     end
 
     # Default theme
-    g.write("test/output/area_keynote.png")
+    img = g.write("test/output/area_keynote.png")
+    assert_same_image("test/expected/area_keynote.png", img)
   end
 
   def test_resize
@@ -56,7 +57,8 @@ class TestGruffArea < GruffTestCase
     end
 
     # Default theme
-    g.write("test/output/area_keynote_small.png")
+    img = g.write("test/output/area_keynote_small.png")
+    assert_same_image("test/expected/area_keynote_small.png", img)
   end
 
   def test_many_datapoints
@@ -71,7 +73,8 @@ class TestGruffArea < GruffTestCase
     g.data('many points', (0..50).map { |i| rand(100) })
 
     # Default theme
-    g.write("test/output/area_many.png")
+    img = g.write("test/output/area_many.png")
+    assert_same_image("test/expected/area_many.png", img)
   end
 
   def test_many_areas_graph_small
@@ -90,7 +93,8 @@ class TestGruffArea < GruffTestCase
     end
 
     # Default theme
-    g.write("test/output/area_many_areas_small.png")
+    img = g.write("test/output/area_many_areas_small.png")
+    assert_same_image("test/expected/area_many_areas_small.png", img)
   end
 
   def test_area_graph_tiny
@@ -109,13 +113,15 @@ class TestGruffArea < GruffTestCase
     end
 
     # Default theme
-    g.write("test/output/area_tiny.png")
+    img = g.write("test/output/area_tiny.png")
+    assert_same_image("test/expected/area_tiny.png", img)
   end
 
   def test_wide
     g = setup_basic_graph('800x400')
     g.title = "Area Wide"
-    g.write("test/output/area_wide.png")
+    img = g.write("test/output/area_wide.png")
+    assert_same_image("test/expected/area_wide.png", img)
   end
 
 protected
