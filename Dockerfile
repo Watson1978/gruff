@@ -1,7 +1,8 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN apt update && \
-    apt install -y gcc git pkg-config ruby ruby-dev libmagickwand-dev && \
+    apt install -y tzdata && \
+    apt install -y make gcc git pkg-config ruby ruby-dev libmagickwand-dev && \
     apt clean && \
     rm -rf /var/lib/apt/lists/* && \
     gem install bundler
