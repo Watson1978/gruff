@@ -28,6 +28,7 @@ jobs:
       run: bundle exec rubocop
 
   test-ruby:
+    needs: lint
     runs-on: ubuntu-20.04
     timeout-minutes: 20
     strategy:
@@ -60,6 +61,7 @@ jobs:
       run: bundle exec rake
 
   test-jruby:
+    needs: lint
     runs-on: ubuntu-20.04
     timeout-minutes: 20
     strategy:
