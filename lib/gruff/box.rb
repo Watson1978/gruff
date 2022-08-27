@@ -11,9 +11,11 @@
 #
 class Gruff::Box < Gruff::Base
   # Specifies the filling opacity in area graph. Default is +0.2+.
+  # @param value [Float] an opacity
   attr_writer :fill_opacity
 
   # Specifies the stroke width in line. Default is +3.0+.
+  # @param value [Numeric] a stroke width
   attr_writer :stroke_width
 
   # Can be used to adjust the spaces between the bars.
@@ -22,6 +24,8 @@ class Gruff::Box < Gruff::Base
   # line with no x dimension).
   #
   # Default value is +0.8+.
+  #
+  # @param space_percent [Float] spacing factor value.
   def spacing_factor=(space_percent)
     raise ArgumentError, 'spacing_factor must be between 0.00 and 1.00' unless (space_percent >= 0) && (space_percent <= 1)
 

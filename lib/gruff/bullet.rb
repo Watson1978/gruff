@@ -12,6 +12,13 @@
 #   g.write('bullet.png')
 #
 class Gruff::Bullet < Gruff::Base
+  # If one numerical argument is given, the graph is drawn at 4/3 ratio
+  # according to the given width (+800+ results in 800x600, +400+ gives 400x300,
+  # etc.).
+  #
+  # Or, send a geometry string for other ratios ( +'800x400'+, +'400x225'+).
+  #
+  # @param target_width [Numeric, String] The graph image width.
   def initialize(target_width = '400x40')
     super
 
@@ -42,12 +49,8 @@ class Gruff::Bullet < Gruff::Base
     @options.map { |k, v| @options[k] = v.to_f if v.is_a?(Numeric) }
   end
 
+  # Draw a graph.
   def draw
-    # TODO: Left label
-    # TODO Bottom labels and markers
-    # @graph_bottom
-    # Calculations are off 800x???
-
     @colors.reverse!
 
     draw_title

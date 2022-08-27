@@ -2,7 +2,6 @@
 
 require 'bigdecimal'
 
-##
 # = Gruff. Graphs.
 #
 # Author:: Geoffrey Grosenbach boss@topfunky.com
@@ -230,7 +229,6 @@ module Gruff
     # You can use a rotation between +0.0+ and +45.0+, or between +0.0+ and +-45.0+.
     #
     # @param rotation [Numeric] the rotation.
-    #
     def label_rotation=(rotation)
       raise ArgumentError, 'rotation must be between 0.0 and 45.0 or between 0.0 and -45.0' if rotation > 45.0 || rotation < -45.0
 
@@ -274,7 +272,6 @@ module Gruff
     # Sets the font for graph text to the font at +font_path+.
     #
     # @param font_path [String] The path to font.
-    #
     def font=(font_path)
       @title_font.path = font_path unless @title_font.path
       @marker_font.path = font_path
@@ -284,7 +281,6 @@ module Gruff
     # Same as {#font=} but for the title.
     #
     # @param font_path [String] The path to font.
-    #
     def title_font=(font_path)
       @title_font.path = font_path
     end
@@ -292,7 +288,6 @@ module Gruff
     # Set the font size of the large title at the top of the graph. Default is +36+.
     #
     # @param value [Numeric] title font size
-    #
     def title_font_size=(value)
       @title_font.size = value
     end
@@ -300,7 +295,6 @@ module Gruff
     # The font size of the labels around the graph. Default is +21+.
     #
     # @param value [Numeric] marker font size
-    #
     def marker_font_size=(value)
       @marker_font.size = value
     end
@@ -311,7 +305,6 @@ module Gruff
     # Will be scaled down if the graph is smaller than 800px wide.
     #
     # @param value [Numeric] legend font size
-    #
     def legend_font_size=(value)
       @legend_font.size = value
     end
@@ -319,7 +312,6 @@ module Gruff
     # Specifies whether to draw the title bolded or not. Default is +true+.
     #
     # @param value [Boolean] specifies whether to draw the title bolded or not.
-    #
     def bold_title=(value)
       @title_font.bold = value
     end
@@ -327,7 +319,6 @@ module Gruff
     # Specifies the text color.
     #
     # @param value [String] color
-    #
     def font_color=(value)
       @title_font.color = value
       @marker_font.color = value
@@ -387,7 +378,6 @@ module Gruff
     # (Or hopefully something better looking than that.)
     #
     # @param options [Hash] The optional setting for theme
-    #
     def theme=(options)
       reset_themes
 
@@ -506,7 +496,6 @@ module Gruff
     #   image = g.to_image
     #   image = image.resize(400, 300).quantize(128, Magick::RGBColorspace)
     #   image.write('test.png')
-    #
     def to_image
       @to_image ||= begin
         draw
@@ -628,9 +617,7 @@ module Gruff
       @hide_line_markers && @x_axis_label.nil?
     end
 
-    ##
     # Calculates size of drawable area, general font dimensions, etc.
-
     def setup_graph_measurements
       @graph_right = setup_right_margin
       @graph_left = setup_left_margin

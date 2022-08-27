@@ -9,9 +9,11 @@
 #
 class Gruff::Bubble < Gruff::Scatter
   # Specifies the filling opacity in area graph. Default is +0.6+.
+  # @param value [Float] an opacity
   attr_writer :fill_opacity
 
   # Specifies the stroke width in line. Default is +1.0+.
+  # @param value [Numeric] a stroke width
   attr_writer :stroke_width
 
   # The first parameter is the name of the dataset.  The next two are the

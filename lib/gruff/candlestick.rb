@@ -15,9 +15,11 @@ class Gruff::Candlestick < Gruff::Base
   attr_writer :show_vertical_markers
 
   # Specifies the filling opacity in area graph. Default is +0.4+.
+  # @param value [Float] an opacity
   attr_writer :fill_opacity
 
   # Specifies the stroke width in line. Default is +2.0+.
+  # @param value [Numeric] a stroke width
   attr_writer :stroke_width
 
   # Specifies the color with up bar. Default is +'#579773'+.
@@ -32,6 +34,8 @@ class Gruff::Candlestick < Gruff::Base
   # line with no x dimension).
   #
   # Default value is +0.9+.
+  #
+  # @param space_percent [Float] spacing factor value.
   def spacing_factor=(space_percent)
     raise ArgumentError, 'spacing_factor must be between 0.00 and 1.00' unless (space_percent >= 0) && (space_percent <= 1)
 

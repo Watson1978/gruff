@@ -10,9 +10,7 @@ require_relative 'gruff/font'
 require_relative 'gruff/base'
 require_relative 'gruff/version'
 
-##
 # = Gruff. Graphs.
-#
 module Gruff
   # @private
   def self.libpath(path)
