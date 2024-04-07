@@ -1,0 +1,11 @@
+module Gruff
+  class Renderer::Polygon
+    @renderer: Renderer
+    @color: String
+    @width: Float
+    @opacity: Float
+
+    def initialize: (Renderer renderer, color: String, ?width: Float, ?opacity: Float) -> void
+    def render: (Array[Float] points) -> void
+  end
+end

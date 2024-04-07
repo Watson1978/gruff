@@ -51,3 +51,13 @@ namespace :test do
     update_expected_images.call('test/expected', 'test/output')
   end
 end
+
+namespace :rbs do
+  desc 'Validate RBS definitions'
+  task :validate do
+    all_sigs = Dir.glob('sig').map { |dir| "-I #{dir}" }.join(' ')
+    sh("bundle exec rbs #{all_sigs} validate") do |ok, _|
+      abort('one or more rbs validate failed') unless ok
+    end
+  end
+end

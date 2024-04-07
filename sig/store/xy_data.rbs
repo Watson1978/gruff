@@ -1,0 +1,17 @@
+module Gruff
+  class Store
+    class XYData < Struct[untyped]
+      include _Data
+
+      attr_accessor x_points: Array[Float]
+      attr_accessor y_points: Array[Float]
+
+      def initialize: (String label, Array[Float] x_points, Array[Float] y_points, String color) -> void
+      def coordinates: () -> Array[[Float, Float]]
+      def min_x: () -> Float?
+      def min_y: () -> Float?
+      def max_x: () -> Float?
+      def max_y: () -> Float?
+    end
+  end
+end

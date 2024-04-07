@@ -1,0 +1,73 @@
+#
+# Here's how to set up a Gruff::Box.
+#
+#   g = Gruff::Box.new
+#   g.data "A", [2, 3, 5, 6, 8, 10, 11, 15, 17, 20, 28, 29, 33, 34, 45, 46, 49, 61]
+#   g.data "B", [3, 4, 34, 35, 38, 39, 45, 60, 61, 69, 80, 130]
+#   g.data "C", [4, 40, 41, 46, 57, 64, 77, 76, 79, 78, 99, 153]
+#   g.write("box_plot.png")
+#
+class Gruff::Box < Gruff::Base
+  @spacing_factor: untyped
+
+  @fill_opacity: untyped
+
+  @stroke_width: untyped
+
+  @normalized_boxes: untyped
+
+  # Specifies the filling opacity in area graph. Default is +0.2+.
+  attr_writer fill_opacity: untyped
+
+  # Specifies the stroke width in line. Default is +3.0+.
+  attr_writer stroke_width: untyped
+
+  # Can be used to adjust the spaces between the bars.
+  # Accepts values between 0.00 and 1.00 where 0.00 means no spacing at all
+  # and 1 means that each bars' width is nearly 0 (so each bar is a simple
+  # line with no x dimension).
+  #
+  # Default value is +0.8+.
+  def spacing_factor=: (untyped space_percent) -> untyped
+
+  private
+
+  def initialize_attributes: () -> untyped
+
+  def draw_graph: () -> untyped
+
+  def normalized_boxes: () -> untyped
+
+  def column_count: () -> untyped
+
+  def calculate_spacing: () -> untyped
+
+  # @private
+  class BoxData
+    def initialize: (untyped label, untyped points, untyped color) -> void
+
+    def min: () -> untyped
+
+    def max: () -> untyped
+
+    def min_whisker: () -> untyped
+
+    def max_whisker: () -> untyped
+
+    def upper_whisker: () -> untyped
+
+    def lower_whisker: () -> untyped
+
+    def median: () -> (0 | untyped)
+
+    def first_quartile: () -> (0 | untyped)
+
+    def third_quartile: () -> (0 | untyped)
+
+    def lower_outliers: () -> untyped
+
+    def upper_outliers: () -> untyped
+
+    def interquartile_range: () -> untyped
+  end
+end

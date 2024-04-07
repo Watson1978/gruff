@@ -16,3 +16,6 @@ gem 'minitest-reporters'
 gem 'rake'
 gem 'simplecov'
 gem 'yard', '~> 0.9.28'
+
+gem 'rbs', '~> 3.4'
+gem 'steep', '~> 1.6'

@@ -1,0 +1,3 @@
+module String::GruffCommify
+  THOUSAND_SEPARATOR: ","
+end

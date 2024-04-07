@@ -1,0 +1,24 @@
+module Gruff
+  class Renderer::Text
+    @renderer: Renderer
+    @text: String
+    @font: Font
+    @rotation: Float?
+    @width: Float
+    @height: Float
+    @x: Float
+    @y: Float
+    @gravity: Magick::GravityType
+
+    attr_reader width: Float
+    attr_reader height: Float
+    attr_reader x: Float
+    attr_reader y: Float
+    attr_reader gravity: Magick::GravityType
+
+    def initialize: (Renderer renderer, string text, font: Font, ?rotation: real?) -> void
+    def add_to_render_queue: (Float width, Float height, Float x, Float y, ?Magick::GravityType gravity) -> void
+    def render: (Float width, Float height, Float x, Float y, ?Magick::GravityType gravity) -> void
+    def metrics: () -> Magick::TypeMetric
+  end
+end

@@ -1,0 +1,68 @@
+# See also the Spider graph.
+#
+# Here's how to make a Gruff::Net.
+#
+#   g = Gruff::Net.new
+#   g.title = "Net Graph"
+#   g.labels = {
+#     0 => '5/6',
+#     1 => '5/15',
+#     2 => '5/24',
+#     3 => '5/30',
+#     4 => '6/4',
+#     5 => '6/12',
+#     6 => '6/21',
+#     7 => '6/28'
+#   }
+#   g.line_width = 3
+#   g.dot_radius = 4
+#   g.data :Jimmy, [25, 36, 86, 39, 25, 31, 79, 88]
+#   g.data :Julie, [22, 29, 35, 38, 36, 40, 46, 57]
+#   g.write("net.png")
+#
+class Gruff::Net < Gruff::Base
+  @hide_dots: untyped
+
+  @line_width: untyped
+
+  @dot_radius: untyped
+
+  @hide_line_numbers: untyped
+
+  @sorted_drawing: untyped
+
+  @center_labels_over_point: untyped
+
+  @radius: untyped
+
+  @circle_radius: untyped
+
+  @stroke_width: untyped
+
+  @center_x: untyped
+
+  @center_y: untyped
+
+  # Hide parts of the graph to fit more data points, or for a different appearance.
+  attr_writer hide_dots: untyped
+
+  # Dimensions of lines and dots; calculated based on dataset size if left unspecified.
+  attr_writer line_width: untyped
+
+  attr_writer dot_radius: untyped
+
+  private
+
+  def initialize_attributes: () -> untyped
+
+  def setup_drawing: () -> untyped
+
+  def setup_graph_measurements: () -> untyped
+
+  def draw_graph: () -> untyped
+
+  # the lines connecting in the center, with the first line vertical
+  def draw_line_markers: () -> (nil | untyped)
+
+  def draw_label: (untyped center_x, untyped center_y, untyped angle, untyped radius, untyped amount) -> untyped
+end

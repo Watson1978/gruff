@@ -1,0 +1,35 @@
+# Handle font setting to draw texts
+class Gruff::Font
+  @path: untyped
+
+  @bold: untyped
+
+  @size: untyped
+
+  @color: untyped
+
+  BOLD_PATH: untyped
+
+  REGULAR_PATH: untyped
+
+  # Get/set font path.
+  attr_accessor path: untyped
+
+  # Get/set font size.
+  attr_accessor size: untyped
+
+  # Get/set font setting whether render bold text.
+  attr_accessor bold: untyped
+
+  # Get/set font color.
+  attr_accessor color: untyped
+
+  def initialize: (?path: untyped?, ?size: ::Float, ?bold: bool, ?color: ::String) -> void
+
+  # Get font weight.
+  # @return [Magick::WeightType] font weight
+  def weight: () -> untyped
+
+  # @private
+  def file_path: () -> untyped
+end

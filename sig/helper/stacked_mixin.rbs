@@ -1,0 +1,15 @@
+module Gruff
+  class Base
+    module StackedMixin
+      @normalized_stacked_bars: untyped
+
+      def calculate_maximum_by_stack: () -> untyped
+
+      def normalized_stacked_bars: () -> untyped
+
+      # @private
+      class BarData
+      end
+    end
+  end
+end

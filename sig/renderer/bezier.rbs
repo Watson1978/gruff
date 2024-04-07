@@ -1,0 +1,10 @@
+module Gruff
+  class Renderer::Bezier
+    @renderer: Renderer
+    @color: String
+    @width: Float
+
+    def initialize: (Renderer renderer, color: String, ?width: Float) -> void
+    def render: (Array[Float] points) -> void
+  end
+end

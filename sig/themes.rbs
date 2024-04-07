@@ -1,0 +1,22 @@
+module Gruff
+  module Themes
+    # A color scheme similar to the popular presentation software.
+    KEYNOTE: { colors: ::Array["#FDD84E" | "#6886B4" | "#72AE6E" | "#D1695E" | "#8A6EAF" | "#EFAA43" | "white"], marker_color: "white", font_color: "white", background_colors: ::Array["black" | "#4a465a"] }
+
+    # A color scheme plucked from the colors on the popular usability blog.
+    THIRTYSEVEN_SIGNALS: { colors: ::Array["#FFF804" | "#336699" | "#339933" | "#ff0000" | "#cc99cc" | "#cf5910" | "black"], marker_color: "black", font_color: "black", background_colors: ::Array["#d1edf5" | "white"] }
+
+    # A color scheme from the colors used on the 2005 Rails keynote
+    # presentation at RubyConf.
+    RAILS_KEYNOTE: { colors: ::Array["#00ff00" | "#333333" | "#ff5d00" | "#f61100" | "white" | "#999999" | "black"], marker_color: "white", font_color: "white", background_colors: ::Array["#0083a3"] }
+
+    # A color scheme similar to that used on the popular podcast site.
+    ODEO: { colors: ::Array["#202020" | "white" | "#3a5b87" | "#a21764" | "#8ab438" | "#999999" | "black"], marker_color: "white", font_color: "white", background_colors: ::Array["#ff47a4" | "#ff1f81"] }
+
+    # A pastel theme
+    PASTEL: { colors: ::Array["#a9dada" | "#aedaa9" | "#daaea9" | "#dadaa9" | "#a9a9da" | "#daaeda" | "#dadada"], marker_color: "#aea9a9", font_color: "black", background_colors: "white" }
+
+    # A greyscale theme
+    GREYSCALE: { colors: ::Array["#282828" | "#383838" | "#686868" | "#989898" | "#c8c8c8" | "#e8e8e8"], marker_color: "#aea9a9", font_color: "black", background_colors: "white" }
+  end
+end

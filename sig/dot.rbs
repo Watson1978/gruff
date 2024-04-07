@@ -1,0 +1,42 @@
+#
+# Graph with dots and labels along a vertical access.
+# see: 'Creating More Effective Graphs' by Robbins
+#
+# Here's how to set up a Gruff::Dot.
+#
+#   g = Gruff::Dot.new
+#   g.title = 'Dot Graph'
+#   g.data :Art, [0, 5, 8, 15]
+#   g.data :Philosophy, [10, 3, 2, 8]
+#   g.data :Science, [2, 15, 8, 11]
+#   g.write('dot.png')
+#
+class Gruff::Dot < Gruff::Base
+  @has_left_labels: untyped
+
+  @dot_style: untyped
+
+  @hide_labels: untyped
+
+  # Prevent drawing of column labels below a stacked bar graph.  Default is +false+.
+  attr_writer hide_labels: untyped
+
+  def initialize: (*untyped) -> void
+
+  private
+
+  def initialize_attributes: () -> untyped
+
+  def hide_labels?: () -> untyped
+
+  def hide_left_label_area?: () -> untyped
+
+  def hide_bottom_label_area?: () -> untyped
+
+  def draw_graph: () -> untyped
+
+  # Instead of base class version, draws vertical background lines and label
+  def draw_line_markers: () -> (nil | untyped)
+
+  def draw_label: (untyped y_offset, untyped index) -> untyped
+end

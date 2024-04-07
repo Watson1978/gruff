@@ -1,0 +1,10 @@
+module Gruff
+  class Renderer::Ellipse
+    @renderer: Renderer
+    @color: String
+    @width: Float
+
+    def initialize: (Renderer renderer, color: String, ?width: Float) -> void
+    def render: (Float origin_x, Float origin_y, Float width, Float height, Float arc_start, Float arc_end) -> void
+  end
+end

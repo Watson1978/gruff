@@ -1,0 +1,13 @@
+module Gruff
+  class Base
+    module BarMixin
+      @normalized_group_bars: untyped
+
+      def normalized_group_bars: () -> untyped
+
+      # @private
+      class BarData
+      end
+    end
+  end
+end

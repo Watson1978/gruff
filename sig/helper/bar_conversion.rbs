@@ -1,0 +1,20 @@
+class Gruff::BarConversion
+  @graph_top: untyped
+
+  @graph_height: untyped
+
+  @spread: untyped
+
+  @minimum_value: untyped
+
+  @maximum_value: untyped
+
+  # all bars go from zero to positive
+  @mode: untyped
+
+  @zero: untyped
+
+  def initialize: (top: untyped, bottom: untyped, minimum_value: untyped, maximum_value: untyped, spread: untyped) -> void
+
+  def get_top_bottom_scaled: (untyped data_point) -> untyped
+end

@@ -1,0 +1,11 @@
+module Gruff
+  class Renderer::DashLine
+    @renderer: Renderer
+    @color: String
+    @width: Float
+    @dasharray: Array[Integer | Float]
+
+    def initialize: (Renderer renderer, color: String, width: Float, ?dasharray: ::Array[Integer | Float]) -> void
+    def render: (Float start_x, Float start_y, Float end_x, Float end_y) -> void
+  end
+end

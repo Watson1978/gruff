@@ -1,0 +1,74 @@
+# Experimental!!! See also the Net graph.
+#
+# Here's how to set up a Gruff::Spider.
+#
+#   g = Gruff::Spider.new(30)
+#   g.title = "Spider Graph"
+#   g.data :Strength, [10]
+#   g.data :Dexterity, [16]
+#   g.data :Constitution, [12]
+#   g.data :Intelligence, [12]
+#   g.data :Wisdom, [10]
+#   g.data 'Charisma', [16]
+#   g.write("spider.png")
+#
+class Gruff::Spider < Gruff::Base
+  @max_value: untyped
+
+  @hide_title: untyped
+
+  @hide_legend: untyped
+
+  @hide_axes: untyped
+
+  @hide_text: untyped
+
+  @rotation: untyped
+
+  @hide_line_markers: untyped
+
+  @center_labels_over_point: untyped
+
+  @graph_left: untyped
+
+  @graph_top: untyped
+
+  @graph_right: untyped
+
+  @graph_bottom: untyped
+
+  @graph_width: untyped
+
+  @graph_height: untyped
+
+  @unit_length: untyped
+
+  # Hide all text.
+  attr_writer hide_axes: untyped
+
+  attr_writer rotation: untyped
+
+  def initialize: (untyped max_value, ?::Integer target_width) -> void
+
+  def hide_text=: (untyped value) -> untyped
+
+  private
+
+  def initialize_attributes: () -> untyped
+
+  def setup_drawing: () -> untyped
+
+  def setup_graph_measurements: () -> untyped
+
+  def setup_data: () -> untyped
+
+  def draw_graph: () -> untyped
+
+  def normalize_points: (untyped value) -> untyped
+
+  def draw_label: (untyped center_x, untyped center_y, untyped angle, untyped radius, untyped amount) -> untyped
+
+  def draw_axes: (untyped center_x, untyped center_y, untyped radius, untyped additive_angle, ?untyped? line_color) -> (nil | untyped)
+
+  def draw_polygon: (untyped center_x, untyped center_y, untyped additive_angle, ?untyped? color) -> untyped
+end

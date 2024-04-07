@@ -1,0 +1,15 @@
+module Gruff
+  class Renderer::Line
+    @renderer: Renderer
+    @color: String
+    @width: Float
+    EPSILON: Float
+
+    def initialize: (Renderer renderer, color: String, ?width: Float?) -> void
+    def render: (Float start_x, Float start_y, Float end_x, Float end_y) -> void
+
+    private
+
+    def render_line: (Float start_x, Float start_y, Float end_x, Float end_y, String color) -> void
+  end
+end

@@ -1,0 +1,56 @@
+module Gruff
+  # @private
+  class Store
+    @data_class: untyped
+
+    @data: untyped
+
+    @norm_data: untyped
+
+    @columns: untyped
+
+    @min: untyped
+
+    @max: untyped
+
+    @min_x: untyped
+
+    @max_x: untyped
+
+    attr_reader data: untyped
+
+    def initialize: (untyped data_class) -> void
+
+    def add: (*untyped args) -> untyped
+
+    def norm_data: () -> untyped
+
+    def normalize: (**untyped keywords) -> untyped
+
+    def empty?: () -> untyped
+
+    def length: () -> untyped
+
+    def columns: () -> untyped
+
+    def min: () -> untyped
+
+    alias min_y min
+
+    def max: () -> untyped
+
+    alias max_y max
+
+    def min_x: () -> untyped
+
+    def max_x: () -> untyped
+
+    def sort_data!: () -> untyped
+
+    def sort_norm_data!: () -> untyped
+
+    def reverse!: () -> untyped
+
+    def change_colors: (untyped colors) -> untyped
+  end
+end

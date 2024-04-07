@@ -1,0 +1,11 @@
+module Gruff
+  class Renderer::Polyline
+    @renderer: Renderer
+    @color: String
+    @width: Float
+    @linejoin: String
+
+    def initialize: (Renderer renderer, color: String, ?width: Float, ?linejoin: ('miter' | 'round' | 'bevel')) -> void
+    def render: (Array[Float] points) -> void
+  end
+end

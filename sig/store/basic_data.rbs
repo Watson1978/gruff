@@ -1,0 +1,10 @@
+module Gruff
+  class Store
+    # @private
+    class BasicData < Struct[untyped]
+      include _Data
+
+      def initialize: (String label, Array[Float] points, String color) -> void
+    end
+  end
+end

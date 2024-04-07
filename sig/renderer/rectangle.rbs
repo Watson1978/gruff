@@ -1,0 +1,11 @@
+module Gruff
+  class Renderer::Rectangle
+    @renderer: Renderer
+    @color: String?
+    @width: Float
+    @opacity: Float
+
+    def initialize: (Renderer renderer, ?color: String?, ?width: Float, ?opacity: Float) -> void
+    def render: (Float upper_left_x, Float upper_left_y, Float lower_right_x, Float lower_right_y) -> void
+  end
+end

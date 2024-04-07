@@ -1,0 +1,72 @@
+#
+# Here's how to set up a Gruff::StackedBar.
+#
+#   g = Gruff::StackedBar.new
+#   g.title = 'StackedBar Graph'
+#   g.data :Art, [0, 5, 8, 15]
+#   g.data :Philosophy, [10, 3, 2, 8]
+#   g.data :Science, [2, 15, 8, 11]
+#   g.write('stacked_bar.png')
+#
+class Gruff::StackedBar < Gruff::Base
+  @bar_spacing: untyped
+
+  @segment_spacing: untyped
+
+  @label_formatting: untyped
+
+  @show_labels_for_bar_values: untyped
+
+  @hide_labels: untyped
+
+  @minimum_value: untyped
+
+  # Labels will be centered over the left of the bar if
+  # there are more labels than columns. This is basically the same
+  # as where it would be for a line graph.
+  @center_labels_over_point: untyped
+
+  @graph_top: untyped
+
+  @graph_height: untyped
+
+  include Gruff::Base::StackedMixin
+
+  # Spacing factor applied between bars.
+  attr_writer bar_spacing: untyped
+
+  # Number of pixels between bar segments.
+  attr_writer segment_spacing: untyped
+
+  # Set the number output format string or lambda.
+  # Default is +"%.2f"+.
+  attr_writer label_formatting: untyped
+
+  # Output the values for the bars on a bar graph.
+  # Default is +false+.
+  attr_writer show_labels_for_bar_values: untyped
+
+  # Prevent drawing of column labels below a stacked bar graph.  Default is +false+.
+  attr_writer hide_labels: untyped
+
+  private
+
+  def initialize_attributes: () -> untyped
+
+  def setup_drawing: () -> untyped
+
+  def setup_data: () -> untyped
+
+  def setup_graph_measurements: () -> (nil | untyped)
+
+  # Draws a bar graph, but multiple sets are stacked on top of each other.
+  def draw_graph: () -> untyped
+
+  def hide_labels?: () -> untyped
+
+  def hide_left_label_area?: () -> untyped
+
+  def hide_bottom_label_area?: () -> untyped
+
+  def proc_text_metrics: () -> untyped
+end

@@ -1,0 +1,27 @@
+module Gruff::BarValueLabel
+  # @private
+  def self.metrics: (untyped value, untyped format, untyped proc_text_metrics) -> ::Array[untyped]
+
+  # @private
+  class Base
+    @coordinate: untyped
+
+    @value: untyped
+
+    attr_reader coordinate: untyped
+
+    attr_reader value: untyped
+
+    def initialize: (untyped coordinate, untyped value) -> void
+  end
+
+  # @private
+  class Bar < Base
+    def prepare_rendering: (untyped format, untyped proc_text_metrics) { (untyped, untyped, untyped, untyped, untyped) -> untyped } -> untyped
+  end
+
+  # @private
+  class SideBar < Base
+    def prepare_rendering: (untyped format, untyped proc_text_metrics) { (untyped, untyped, untyped, untyped, untyped) -> untyped } -> untyped
+  end
+end

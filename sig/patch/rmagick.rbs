@@ -1,0 +1,5 @@
+module Magick
+  class Draw
+    def annotate_scaled: (Magick::Image img, Float width, Float height, Float x, Float y, String text, Float scale) -> void
+  end
+end

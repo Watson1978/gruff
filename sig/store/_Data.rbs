@@ -1,0 +1,15 @@
+module Gruff
+  class Store
+    interface _Data
+      def label: () -> String
+      def points: () -> Array[Float]
+      def color: () -> String
+
+      def empty?: () -> bool
+      def columns: () -> Integer
+      def min: () -> Float?
+      def max: () -> Float?
+      def normalize: (minimum: Float, spread: Float) -> void
+    end
+  end
+end

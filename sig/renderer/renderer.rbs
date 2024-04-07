@@ -1,0 +1,34 @@
+module Gruff
+  class Renderer
+    @draw: Magick::Draw
+    @text_renderers: Array[Text]
+    @scale: Float
+    @image: Magick::Image
+    @gradated_background_retry_count: Integer
+
+    attr_accessor text_renderers: Array[Text]
+    attr_reader draw: Magick::Draw
+    attr_reader image: Magick::Image
+    attr_reader scale: Float
+
+    def initialize: (Float columns, Float rows, Float scale, Hash[Symbol, untyped] theme_options) -> void
+    def finish: () -> untyped
+    def transparent_background: (Float columns, Float rows) -> void
+
+    private
+
+    def background: (Float columns, Float rows, Float scale, Hash[Symbol, untyped] theme_options) -> void
+
+    # Use with a theme to use an image (800x600 original) background.
+    def image_background: (Float scale, String image_path) -> void
+
+    # Make a new image at the current size with a solid +color+.
+    def solid_background: (Float columns, Float rows, String color) -> void
+
+    # Use with a theme definition method to draw a gradated background.
+    def gradated_background: (Float columns, Float rows, String top_color, String bottom_color, ?Symbol direct) -> void
+
+    # Use with a theme to make a transparent background
+    def render_transparent_background: (Float columns, Float rows) -> void
+  end
+end
